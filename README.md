@@ -1,6 +1,6 @@
 # kaneclover.com
 
-## My business card / portfolio site
+# WIP
 
 [Next.js](https://nextjs.org/) / [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
