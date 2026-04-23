@@ -4,14 +4,16 @@ import { useEffect } from "react";
 import { useInView } from "@/hooks/useInView";
 
 const skills = [
-  "TypeScript", "React", "Next.js", "Node.js",
-  "PostgreSQL", "Figma", "TailwindCSS", "AWS",
+  "TypeScript", "React", "React Native", "Next.js",
+  "GraphQL", "Apollo", "REST / OpenAPI", "Figma",
+  "HTML / CSS / SCSS", "Testing (Jest · Cypress)", "CI / CD", "Agentic AI",
 ];
 
 const experience = [
-  { role: "Senior Frontend Engineer", company: "Vercel", period: "2023 – Present" },
-  { role: "Full-stack Developer", company: "Linear", period: "2021 – 2023" },
-  { role: "UI Engineer", company: "Stripe", period: "2019 – 2021" },
+  { role: "Senior Front End Developer", company: "Mobilityways", period: "Oct 2022 – Present" },
+  { role: "Lead Front End Developer", company: "GetRegistered (Freelance)", period: "Apr – Oct 2022" },
+  { role: "Senior Front End Developer", company: "Digital Wholesale Solutions", period: "Jun 2019 – Oct 2022" },
+  { role: "Senior Web Developer", company: "Assure24 Limited", period: "Feb 2011 – Jun 2019" },
 ];
 
 export default function About() {
@@ -27,8 +29,6 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div
             ref={headingRef as React.RefObject<HTMLDivElement>}
-            className="animate-in-left"
-            data-visible={headingVisible}
             style={{
               opacity: headingVisible ? 1 : 0,
               transform: headingVisible ? "translateX(0)" : "translateX(-24px)",
@@ -45,16 +45,18 @@ export default function About() {
               className="font-heading font-bold leading-tight mb-6"
               style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: "var(--color-foreground)" }}
             >
-              I care about the&nbsp;details.
+              20+ years, still&nbsp;learning.
             </h2>
             <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-              I&apos;m a full-stack developer with 6 years of experience building products people
-              actually enjoy using. My background spans engineering and design — I&apos;m comfortable
-              equally in Figma and a terminal.
+              I&apos;m a Senior Front End Developer based in Manchester with two decades of experience
+              spanning startups, agencies, enterprise and freelance work. My background in Graphic Design
+              means I care as much about how things look and feel as how they&apos;re built.
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-              I&apos;m drawn to the hard problems: performance at scale, nuanced interaction design,
-              systems that stay maintainable as teams grow. Currently based in London.
+              I&apos;m passionate about well-defined application architecture, the ever-evolving
+              JavaScript ecosystem, and more recently, agentic AI patterns that supercharge
+              development workflows. I enjoy mentoring, design systems, and the intersection of UX and
+              engineering.
             </p>
 
             <div className="mt-10">
@@ -105,6 +107,18 @@ export default function About() {
                   </p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-2 pl-6">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-muted)" }}>
+                Education
+              </p>
+              <p className="font-heading font-semibold text-base" style={{ color: "var(--color-foreground)" }}>
+                BA Graphic Design
+              </p>
+              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                Salford University, Greater Manchester
+              </p>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function Hero() {
             className="inline-block text-sm font-medium tracking-widest uppercase mb-6"
             style={{ color: "var(--color-accent)" }}
           >
-            Available for work
+            Manchester, UK · Open to opportunities
           </span>
         </div>
 
@@ -45,7 +45,7 @@ export default function Hero() {
               transitionDelay: "200ms",
             }}
           >
-            Alex Chen.
+            Kane Clover.
           </span>
           <span
             className="block transition-all duration-700 ease-out"
@@ -56,7 +56,7 @@ export default function Hero() {
               color: "var(--color-text-muted)",
             }}
           >
-            Developer &amp;
+            Senior Front End
           </span>
           <span
             className="block transition-all duration-700 ease-out"
@@ -67,7 +67,7 @@ export default function Hero() {
               color: "var(--color-text-muted)",
             }}
           >
-            Designer.
+            Developer.
           </span>
         </h1>
 
@@ -80,8 +80,8 @@ export default function Hero() {
             transitionDelay: "560ms",
           }}
         >
-          I build thoughtful digital products — from early-stage ideas to polished,
-          production-ready experiences. Currently open to full-time and freelance roles.
+          20+ years crafting beautiful user interfaces, scalable architectures and
+          modern JavaScript applications. Passionate about the ever-evolving web platform.
         </p>
 
         <div

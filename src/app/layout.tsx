@@ -17,8 +17,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Chen — Developer & Designer",
-  description: "Full-stack developer and designer crafting thoughtful digital experiences.",
+  title: "Kane Clover — Senior Front End Developer",
+  description: "Senior Front End Developer with 20+ years of experience building beautiful UIs, scalable architectures and modern JavaScript applications. Based in Manchester, UK.",
 };
 
 export default function RootLayout({

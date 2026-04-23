@@ -5,9 +5,8 @@ import { Send, ExternalLink } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 
 const socials = [
+  { label: "LinkedIn", href: "https://linkedin.com/in/kane-clover" },
   { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "X / Twitter", href: "https://twitter.com" },
 ];
 
 export default function Contact() {
@@ -59,7 +58,7 @@ export default function Contact() {
             Let&apos;s build something.
           </h2>
           <p className="max-w-lg text-lg mb-14" style={{ color: "var(--color-text-muted)" }}>
-            Whether it&apos;s a full-time role, a freelance project, or just a conversation — I&apos;d love to hear from you.
+            Whether it&apos;s a full-time role, a contract, or just a conversation about front end architecture — I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -216,11 +215,11 @@ export default function Contact() {
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--color-text-muted)" }}>
               Prefer a more direct route? Email me at{" "}
               <a
-                href="mailto:hello@alexchen.dev"
+                href="mailto:kane.clover@gmail.com"
                 className="font-medium transition-colors duration-200"
                 style={{ color: "var(--color-foreground)" }}
               >
-                hello@alexchen.dev
+                kane.clover@gmail.com
               </a>
             </p>
 

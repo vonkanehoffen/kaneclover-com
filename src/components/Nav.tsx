@@ -31,7 +31,7 @@ export default function Nav() {
           className="font-heading font-semibold text-lg tracking-tight transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           style={{ color: "var(--color-foreground)" }}
         >
-          AC
+          KC
         </a>
         <ul className="flex items-center gap-8">
           {links.map(({ label, href }) => (
