@@ -56,7 +56,7 @@ export default function Hero() {
               color: "var(--color-text-muted)",
             }}
           >
-            Senior Front End
+            Senior Product
           </span>
           <span
             className="block transition-all duration-700 ease-out"
@@ -67,7 +67,7 @@ export default function Hero() {
               color: "var(--color-text-muted)",
             }}
           >
-            Developer.
+            Engineer.
           </span>
         </h1>
 
@@ -80,8 +80,9 @@ export default function Hero() {
             transitionDelay: "560ms",
           }}
         >
-          20+ years crafting beautiful user interfaces, scalable architectures and
-          modern JavaScript applications. Passionate about the ever-evolving web platform.
+          20+ years crafting beautiful user interfaces, scalable architectures
+          and modern applications. Passionate about the ever-evolving digital
+          platform.
         </p>
 
         <div
@@ -99,8 +100,14 @@ export default function Hero() {
               background: "var(--color-foreground)",
               color: "var(--color-background)",
             }}
-            onMouseEnter={e => { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "scale(0.98)"; }}
-            onMouseLeave={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "scale(1)"; }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.85";
+              e.currentTarget.style.transform = "scale(0.98)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "scale(1)";
+            }}
           >
             View Work
           </a>
@@ -112,8 +119,12 @@ export default function Hero() {
               color: "var(--color-foreground)",
               border: "1.5px solid var(--color-border)",
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--color-foreground)"; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--color-border)"; }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "var(--color-foreground)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "var(--color-border)";
+            }}
           >
             Get in touch
           </a>

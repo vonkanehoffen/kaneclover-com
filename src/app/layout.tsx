@@ -17,8 +17,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Kane Clover — Senior Front End Developer",
-  description: "Senior Front End Developer with 20+ years of experience building beautiful UIs, scalable architectures and modern JavaScript applications. Based in Manchester, UK.",
+  title: "Kane Clover — Senior Product Engineer",
+  description: "Senior Product Engineer with 20+ years of experience building beautiful UIs, scalable architectures and modern JavaScript applications. Based in Manchester, UK.",
 };
 
 export default function RootLayout({

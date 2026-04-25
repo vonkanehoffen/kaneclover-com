@@ -9,16 +9,18 @@ const projects = [
     id: 1,
     title: "Mobilityways App",
     category: "Cross-platform · React Native",
-    description: "Lead development of a sustainable commuting app used across the UK, including agentic AI patterns for coding assistance and customer-facing features.",
+    description:
+      "Architected a UK-wide sustainable commuting app, delivering customer-facing AI features and defining team-wide agentic workflows via Cursor & Claude Code.",
     tags: ["React Native", "TypeScript", "Agentic AI"],
-    year: "2023",
+    year: "2026",
     accent: "#2563EB",
   },
   {
     id: 2,
     title: "GetRegistered",
     category: "iOS App · Freelance",
-    description: "Designed and built an iOS event-arrivals and e-ticketing app from Figma prototype to App Store. OAuth2-secured REST API integration via React Query.",
+    description:
+      "Designed and built an iOS event-arrivals and e-ticketing app from Figma prototype to App Store. OAuth2-secured REST API integration via React Query.",
     tags: ["React Native", "TypeScript", "React Query"],
     year: "2022",
     accent: "#059669",
@@ -27,7 +29,8 @@ const projects = [
     id: 3,
     title: "Micro Front End Platform",
     category: "Architecture · DWS / Aurora",
-    description: "Designed a Lerna-based monorepo and MFE architecture that introduced TypeScript, GraphQL, Apollo and OpenAPI client generation to the business.",
+    description:
+      "Designed a Lerna-based monorepo and MFE architecture that introduced TypeScript, GraphQL, Apollo and OpenAPI client generation to the business.",
     tags: ["TypeScript", "GraphQL", "Apollo", "Lerna"],
     year: "2021",
     accent: "#7C3AED",
@@ -36,7 +39,8 @@ const projects = [
     id: 4,
     title: "B2B Sales & Billing Suite",
     category: "Enterprise · React",
-    description: "Built React front ends for large telco customers including Vodafone and Daisy Group. Introduced TDD practices and E2E testing via Cypress.",
+    description:
+      "Built React front ends for large telco customers including Vodafone and Daisy Group. Introduced TDD practices and E2E testing via Cypress.",
     tags: ["React", "GraphQL", "Cypress", "SCSS"],
     year: "2020",
     accent: "#D97706",
@@ -45,7 +49,8 @@ const projects = [
     id: 5,
     title: "CPQ Tool",
     category: "SaaS · Assure24",
-    description: "Took over lead front-end role for a React & Redux Configure-Price-Quote system used by major connectivity resellers across the UK.",
+    description:
+      "Took over lead front-end role for a React & Redux Configure-Price-Quote system used by major connectivity resellers across the UK.",
     tags: ["React", "Redux", "Jest", "Enzyme"],
     year: "2015",
     accent: "#DB2777",
@@ -54,21 +59,30 @@ const projects = [
     id: 6,
     title: "NHS Touch Screen System",
     category: "Public Sector · Kiosk",
-    description: "Designed and built an interactive information point system for an NHS hospital, with a custom locally-hosted CMS on a Linux distribution.",
+    description:
+      "Designed and built an interactive information point system for an NHS hospital, with a custom locally-hosted CMS on a Linux distribution.",
     tags: ["HTML/CSS", "JavaScript", "Linux", "CMS"],
     year: "2009",
     accent: "#0891B2",
   },
 ];
 
-function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
+function ProjectCard({
+  project,
+  index,
+}: {
+  project: (typeof projects)[0];
+  index: number;
+}) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <article
       className="group relative rounded-2xl p-7 cursor-pointer transition-all duration-300"
       style={{
-        background: hovered ? "var(--color-surface-hover)" : "var(--color-surface)",
+        background: hovered
+          ? "var(--color-surface-hover)"
+          : "var(--color-surface)",
         border: "1px solid var(--color-border)",
         transform: hovered ? "translateY(-3px)" : "translateY(0)",
         boxShadow: hovered
@@ -91,26 +105,40 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           aria-hidden="true"
         />
         <div className="flex items-center gap-3">
-          <span className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>
+          <span
+            className="text-xs font-medium"
+            style={{ color: "var(--color-text-muted)" }}
+          >
             {project.year}
           </span>
           <div
             className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300"
             style={{
-              background: hovered ? "var(--color-foreground)" : "var(--color-muted)",
-              transform: hovered ? "rotate(-45deg) scale(1.1)" : "rotate(0deg) scale(1)",
+              background: hovered
+                ? "var(--color-foreground)"
+                : "var(--color-muted)",
+              transform: hovered
+                ? "rotate(-45deg) scale(1.1)"
+                : "rotate(0deg) scale(1)",
             }}
             aria-hidden="true"
           >
             <ArrowUpRight
               size={14}
-              style={{ color: hovered ? "var(--color-background)" : "var(--color-text-muted)" }}
+              style={{
+                color: hovered
+                  ? "var(--color-background)"
+                  : "var(--color-text-muted)",
+              }}
             />
           </div>
         </div>
       </div>
 
-      <p className="text-xs font-medium uppercase tracking-wider mb-2" style={{ color: project.accent }}>
+      <p
+        className="text-xs font-medium uppercase tracking-wider mb-2"
+        style={{ color: project.accent }}
+      >
         {project.category}
       </p>
 
@@ -121,12 +149,15 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         {project.title}
       </h3>
 
-      <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--color-text-muted)" }}>
+      <p
+        className="text-sm leading-relaxed mb-5"
+        style={{ color: "var(--color-text-muted)" }}
+      >
         {project.description}
       </p>
 
       <div className="flex flex-wrap gap-2">
-        {project.tags.map(tag => (
+        {project.tags.map((tag) => (
           <span
             key={tag}
             className="text-xs px-3 py-1 rounded-full font-medium"
@@ -173,7 +204,10 @@ export default function Projects() {
           </span>
           <h2
             className="font-heading font-bold leading-tight"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", color: "var(--color-foreground)" }}
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              color: "var(--color-foreground)",
+            }}
           >
             Things I&apos;ve built
           </h2>
