@@ -136,7 +136,10 @@ export default function Hero() {
         style={{
           opacity: mounted ? 0.4 : 0,
           transitionDelay: "900ms",
-          animation: mounted ? "bounce 2s ease-in-out infinite" : "none",
+          animationName: mounted ? "bounce" : "none",
+          animationDuration: "2s",
+          animationTimingFunction: "ease-in-out",
+          animationIterationCount: "infinite",
           animationDelay: "1.2s",
         }}
       >
