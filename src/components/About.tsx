@@ -4,18 +4,27 @@ import { useEffect } from "react";
 import { useInView } from "@/hooks/useInView";
 
 const skills = [
+  "Cursor",
+  "Claude Code",
+  "Product Architecture",
+
+  // 2. The Core Stack
   "TypeScript",
-  "React",
-  "React Native",
+  "React / React Native",
   "Next.js",
-  "GraphQL",
-  "Apollo",
+  "HTML / CSS",
+  "Node.js",
+
+  // 3. Distinct Data Architectures
   "REST / OpenAPI",
-  "Figma",
-  "HTML / CSS / SCSS",
-  "Testing (Jest · Cypress)",
+  "GraphQL",
+  "Supabase",
+  "PostgreSQL",
+
+  // 4. Engineering & Design
+  "Automated Testing (Jest · Cypress · Maestro)",
   "CI / CD",
-  "Agentic AI",
+  "UI / UX Design (Figma)",
 ];
 
 const experience = [
@@ -93,19 +102,21 @@ export default function About() {
               style={{ color: "var(--color-text-muted)" }}
             >
               I&apos;m a Senior Product Engineer based in Manchester with two
-              decades of experience spanning startups, agencies, enterprise and
-              freelance work. My background in Graphic Design means I care as
-              much about how things look and feel as how they&apos;re built.
+              decades of experience spanning startups, enterprise, and
+              high-growth SaaS. With a background in Graphic Design, I occupy
+              the space where high-fidelity UX meets deep technical architecture
+              — ensuring the user experience is as robust as the code behind it.
             </p>
             <p
               className="text-base leading-relaxed"
               style={{ color: "var(--color-text-muted)" }}
             >
-              I&apos;m passionate about well-defined application architecture,
-              the ever-evolving JavaScript ecosystem, and more recently, agentic
-              AI patterns that supercharge development workflows. I enjoy
-              mentoring, design systems, and the intersection of UX and
-              engineering.
+              I specialize in building scalable TypeScript ecosystems and robust
+              application architectures. Currently, I&apos;m focused on
+              orchestrating agentic AI patterns to supercharge both development
+              velocity and customer-facing functionality. I thrive at the
+              intersection of design systems, mentoring, and shipping 0-to-1
+              products.
             </p>
 
             <div className="mt-10">

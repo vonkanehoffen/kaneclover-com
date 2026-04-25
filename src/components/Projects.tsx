@@ -28,7 +28,7 @@ const projects = [
   {
     id: 3,
     title: "Micro Front End Platform",
-    category: "Architecture · DWS / Aurora",
+    category: "Architecture · DWS",
     description:
       "Designed a Lerna-based monorepo and MFE architecture that introduced TypeScript, GraphQL, Apollo and OpenAPI client generation to the business.",
     tags: ["TypeScript", "GraphQL", "Apollo", "Lerna"],

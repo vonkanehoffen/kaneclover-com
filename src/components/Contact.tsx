@@ -19,7 +19,8 @@ export default function Contact() {
     const e: Record<string, string> = {};
     if (!form.name.trim()) e.name = "Name is required.";
     if (!form.email.trim()) e.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter a valid email address.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      e.email = "Enter a valid email address.";
     if (!form.message.trim()) e.message = "Message is required.";
     return e;
   }
@@ -27,10 +28,13 @@ export default function Contact() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const errs = validate();
-    if (Object.keys(errs).length) { setErrors(errs); return; }
+    if (Object.keys(errs).length) {
+      setErrors(errs);
+      return;
+    }
     setErrors({});
     setStatus("sending");
-    await new Promise(r => setTimeout(r, 1200));
+    await new Promise((r) => setTimeout(r, 1200));
     setStatus("sent");
   }
 
@@ -53,12 +57,19 @@ export default function Contact() {
           </span>
           <h2
             className="font-heading font-bold leading-tight mb-4"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", color: "var(--color-foreground)" }}
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              color: "var(--color-foreground)",
+            }}
           >
             Let&apos;s build something.
           </h2>
-          <p className="max-w-lg text-lg mb-14" style={{ color: "var(--color-text-muted)" }}>
-            Whether it&apos;s a full-time role, a contract, or just a conversation about front end architecture — I&apos;d love to hear from you.
+          <p
+            className="max-w-lg text-lg mb-14"
+            style={{ color: "var(--color-text-muted)" }}
+          >
+            Whether it&apos;s a full-time role, a contract, or just a
+            conversation — I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -70,13 +81,17 @@ export default function Contact() {
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s",
+              transition:
+                "opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s",
             }}
           >
             {status === "sent" ? (
               <div
                 className="rounded-2xl p-8 text-center"
-                style={{ background: "var(--color-surface)", border: "1px solid var(--color-border)" }}
+                style={{
+                  background: "var(--color-surface)",
+                  border: "1px solid var(--color-border)",
+                }}
                 role="status"
                 aria-live="polite"
               >
@@ -87,27 +102,31 @@ export default function Contact() {
                 >
                   <Send size={20} style={{ color: "#059669" }} />
                 </div>
-                <p className="font-heading font-semibold text-lg mb-2" style={{ color: "var(--color-foreground)" }}>
+                <p
+                  className="font-heading font-semibold text-lg mb-2"
+                  style={{ color: "var(--color-foreground)" }}
+                >
                   Message sent!
                 </p>
-                <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                  Thanks for reaching out — I&apos;ll be in touch within 24 hours.
+                <p
+                  className="text-sm"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  Thanks for reaching out — I&apos;ll be in touch within 24
+                  hours.
                 </p>
               </div>
             ) : (
               <div className="flex flex-col gap-5">
-                <Field
-                  label="Name"
-                  id="name"
-                  required
-                  error={errors.name}
-                >
+                <Field label="Name" id="name" required error={errors.name}>
                   <input
                     id="name"
                     type="text"
                     autoComplete="name"
                     value={form.name}
-                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, name: e.target.value }))
+                    }
                     placeholder="Your name"
                     aria-describedby={errors.name ? "name-error" : undefined}
                     aria-invalid={!!errors.name}
@@ -117,24 +136,27 @@ export default function Contact() {
                       border: `1.5px solid ${errors.name ? "var(--color-destructive)" : "var(--color-border)"}`,
                       color: "var(--color-foreground)",
                     }}
-                    onFocus={e => { if (!errors.name) e.target.style.borderColor = "var(--color-accent)"; }}
-                    onBlur={e => { if (!errors.name) e.target.style.borderColor = "var(--color-border)"; }}
+                    onFocus={(e) => {
+                      if (!errors.name)
+                        e.target.style.borderColor = "var(--color-accent)";
+                    }}
+                    onBlur={(e) => {
+                      if (!errors.name)
+                        e.target.style.borderColor = "var(--color-border)";
+                    }}
                   />
                 </Field>
 
-                <Field
-                  label="Email"
-                  id="email"
-                  required
-                  error={errors.email}
-                >
+                <Field label="Email" id="email" required error={errors.email}>
                   <input
                     id="email"
                     type="email"
                     autoComplete="email"
                     inputMode="email"
                     value={form.email}
-                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, email: e.target.value }))
+                    }
                     placeholder="you@example.com"
                     aria-describedby={errors.email ? "email-error" : undefined}
                     aria-invalid={!!errors.email}
@@ -144,8 +166,14 @@ export default function Contact() {
                       border: `1.5px solid ${errors.email ? "var(--color-destructive)" : "var(--color-border)"}`,
                       color: "var(--color-foreground)",
                     }}
-                    onFocus={e => { if (!errors.email) e.target.style.borderColor = "var(--color-accent)"; }}
-                    onBlur={e => { if (!errors.email) e.target.style.borderColor = "var(--color-border)"; }}
+                    onFocus={(e) => {
+                      if (!errors.email)
+                        e.target.style.borderColor = "var(--color-accent)";
+                    }}
+                    onBlur={(e) => {
+                      if (!errors.email)
+                        e.target.style.borderColor = "var(--color-border)";
+                    }}
                   />
                 </Field>
 
@@ -159,9 +187,13 @@ export default function Contact() {
                     id="message"
                     rows={5}
                     value={form.message}
-                    onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, message: e.target.value }))
+                    }
                     placeholder="What are you working on?"
-                    aria-describedby={errors.message ? "message-error" : undefined}
+                    aria-describedby={
+                      errors.message ? "message-error" : undefined
+                    }
                     aria-invalid={!!errors.message}
                     className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 resize-none"
                     style={{
@@ -169,8 +201,14 @@ export default function Contact() {
                       border: `1.5px solid ${errors.message ? "var(--color-destructive)" : "var(--color-border)"}`,
                       color: "var(--color-foreground)",
                     }}
-                    onFocus={e => { if (!errors.message) e.target.style.borderColor = "var(--color-accent)"; }}
-                    onBlur={e => { if (!errors.message) e.target.style.borderColor = "var(--color-border)"; }}
+                    onFocus={(e) => {
+                      if (!errors.message)
+                        e.target.style.borderColor = "var(--color-accent)";
+                    }}
+                    onBlur={(e) => {
+                      if (!errors.message)
+                        e.target.style.borderColor = "var(--color-border)";
+                    }}
                   />
                 </Field>
 
@@ -179,7 +217,10 @@ export default function Contact() {
                   disabled={status === "sending"}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer mt-1"
                   style={{
-                    background: status === "sending" ? "var(--color-secondary)" : "var(--color-foreground)",
+                    background:
+                      status === "sending"
+                        ? "var(--color-secondary)"
+                        : "var(--color-foreground)",
                     color: "var(--color-background)",
                     opacity: status === "sending" ? 0.7 : 1,
                   }}
@@ -189,7 +230,10 @@ export default function Contact() {
                     <>
                       <span
                         className="w-4 h-4 rounded-full border-2 border-t-transparent animate-spin"
-                        style={{ borderColor: "var(--color-background)", borderTopColor: "transparent" }}
+                        style={{
+                          borderColor: "var(--color-background)",
+                          borderTopColor: "transparent",
+                        }}
                         aria-hidden="true"
                       />
                       Sending…
@@ -209,10 +253,14 @@ export default function Contact() {
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s",
+              transition:
+                "opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s",
             }}
           >
-            <p className="text-base leading-relaxed mb-8" style={{ color: "var(--color-text-muted)" }}>
+            <p
+              className="text-base leading-relaxed mb-8"
+              style={{ color: "var(--color-text-muted)" }}
+            >
               Prefer a more direct route? Email me at{" "}
               <a
                 href="mailto:kane.clover@gmail.com"
@@ -223,7 +271,10 @@ export default function Contact() {
               </a>
             </p>
 
-            <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--color-text-muted)" }}>
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-4"
+              style={{ color: "var(--color-text-muted)" }}
+            >
               Find me online
             </p>
             <div className="flex flex-wrap gap-3">
@@ -234,13 +285,17 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer"
-                  style={{ background: "var(--color-muted)", color: "var(--color-secondary)" }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = "var(--color-foreground)";
+                  style={{
+                    background: "var(--color-muted)",
+                    color: "var(--color-secondary)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background =
+                      "var(--color-foreground)";
                     e.currentTarget.style.color = "var(--color-background)";
                     e.currentTarget.style.transform = "translateY(-2px)";
                   }}
-                  onMouseLeave={e => {
+                  onMouseLeave={(e) => {
                     e.currentTarget.style.background = "var(--color-muted)";
                     e.currentTarget.style.color = "var(--color-secondary)";
                     e.currentTarget.style.transform = "translateY(0)";
@@ -273,9 +328,21 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-medium" style={{ color: "var(--color-foreground)" }}>
+      <label
+        htmlFor={id}
+        className="text-sm font-medium"
+        style={{ color: "var(--color-foreground)" }}
+      >
         {label}
-        {required && <span className="ml-1" style={{ color: "var(--color-destructive)" }} aria-hidden="true">*</span>}
+        {required && (
+          <span
+            className="ml-1"
+            style={{ color: "var(--color-destructive)" }}
+            aria-hidden="true"
+          >
+            *
+          </span>
+        )}
       </label>
       {children}
       {error && (
