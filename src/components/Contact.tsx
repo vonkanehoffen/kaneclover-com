@@ -6,12 +6,14 @@ import { useInView } from "@/hooks/useInView";
 
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/kane-clover" },
-  { label: "GitHub", href: "https://github.com" },
+  { label: "GitHub", href: "https://github.com/vonkanehoffen" },
 ];
 
 export default function Contact() {
   const { ref, isVisible } = useInView();
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -34,8 +36,17 @@ export default function Contact() {
     }
     setErrors({});
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("sent");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -85,7 +96,43 @@ export default function Contact() {
                 "opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s",
             }}
           >
-            {status === "sent" ? (
+            {status === "error" ? (
+              <div
+                className="rounded-2xl p-8 text-center"
+                style={{
+                  background: "var(--color-surface)",
+                  border: "1px solid var(--color-destructive)",
+                }}
+                role="alert"
+                aria-live="assertive"
+              >
+                <p
+                  className="font-heading font-semibold text-lg mb-2"
+                  style={{ color: "var(--color-foreground)" }}
+                >
+                  Something went wrong.
+                </p>
+                <p
+                  className="text-sm mb-4"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  Please try again or email me directly at{" "}
+                  <a
+                    href="mailto:hello@kaneclover.com"
+                    style={{ color: "var(--color-accent)" }}
+                  >
+                    hello@kaneclover.com
+                  </a>
+                </p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="text-sm font-medium underline cursor-pointer"
+                  style={{ color: "var(--color-foreground)" }}
+                >
+                  Try again
+                </button>
+              </div>
+            ) : status === "sent" ? (
               <div
                 className="rounded-2xl p-8 text-center"
                 style={{
@@ -263,11 +310,11 @@ export default function Contact() {
             >
               Prefer a more direct route? Email me at{" "}
               <a
-                href="mailto:kane.clover@gmail.com"
+                href="mailto:hello@kaneclover.com"
                 className="font-medium transition-colors duration-200"
                 style={{ color: "var(--color-foreground)" }}
               >
-                kane.clover@gmail.com
+                hello@kaneclover.com
               </a>
             </p>
 

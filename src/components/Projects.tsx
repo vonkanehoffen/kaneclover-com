@@ -26,7 +26,7 @@ const projects = [
     accent: "#7C3AED",
   },
   {
-    id: 2,
+    id: 3,
     title: "GetRegistered",
     category: "iOS App · Freelance",
     description:
