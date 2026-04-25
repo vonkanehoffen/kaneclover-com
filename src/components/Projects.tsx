@@ -17,6 +17,16 @@ const projects = [
   },
   {
     id: 2,
+    title: "What The Plate",
+    category: "B2C AI App · Independent",
+    description:
+      "Architected and shipped a full-stack AI meal tracker for iOS and Android. Leveraged Supabase for backend infrastructure and RevenueCat for cross-platform subscriptions.",
+    tags: ["React Native", "Supabase", "RevenueCat", "AI"],
+    year: "2024", // Adjust this year to fit your timeline!
+    accent: "#7C3AED",
+  },
+  {
+    id: 2,
     title: "GetRegistered",
     category: "iOS App · Freelance",
     description:
@@ -26,22 +36,12 @@ const projects = [
     accent: "#059669",
   },
   {
-    id: 3,
-    title: "Micro Front End Platform",
-    category: "Architecture · DWS",
-    description:
-      "Designed a Lerna-based monorepo and MFE architecture that introduced TypeScript, GraphQL, Apollo and OpenAPI client generation to the business.",
-    tags: ["TypeScript", "GraphQL", "Apollo", "Lerna"],
-    year: "2021",
-    accent: "#7C3AED",
-  },
-  {
     id: 4,
     title: "B2B Sales & Billing Suite",
     category: "Enterprise · React",
     description:
-      "Built React front ends for large telco customers including Vodafone and Daisy Group. Introduced TDD practices and E2E testing via Cypress.",
-    tags: ["React", "GraphQL", "Cypress", "SCSS"],
+      "Built React front ends for large telco customers including Vodafone and Daisy Group. Introduced TDD practices, E2E testing and Monorepo Architecture to the business.",
+    tags: ["React", "TypeScript", "Cypress", "SCSS"],
     year: "2020",
     accent: "#D97706",
   },
