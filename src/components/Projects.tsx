@@ -20,7 +20,7 @@ const projects = [
     title: "What The Plate",
     category: "B2C AI App · Independent",
     description:
-      "Architected and shipped a full-stack AI meal tracker for iOS and Android. Leveraged Supabase for backend infrastructure and RevenueCat for cross-platform subscriptions.",
+      "Designed and built a meal tracker app end-to-end. Leveraged Gemini for AI image analysis, Supabase for backend infrastructure, and RevenueCat for cross-platform subscriptions.",
     tags: ["React Native", "Supabase", "RevenueCat", "AI"],
     year: "2024", // Adjust this year to fit your timeline!
     accent: "#7C3AED",
