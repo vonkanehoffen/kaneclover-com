@@ -50,7 +50,7 @@ const experience = [
   },
   {
     role: "Advanced Web Design Tutor",
-    company: "Manchester College",
+    company: "Manchester College (Part time)",
     period: "Apr 2012 – July 2012",
   },
   {
