@@ -80,7 +80,7 @@ export default function Hero() {
             transitionDelay: "560ms",
           }}
         >
-          20+ years crafting beautiful user interfaces, scalable architectures
+          20+ years crafting beautiful user experiences, scalable architectures
           and modern applications. Passionate about the ever-evolving digital
           platform.
         </p>
