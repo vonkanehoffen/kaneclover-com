@@ -10,7 +10,7 @@ const projects = [
     title: "Mobilityways App",
     category: "Cross-platform · React Native",
     description:
-      "Architected a UK-wide sustainable commuting app, delivering customer-facing AI features and defining team-wide agentic workflows via Cursor & Claude Code.",
+      "Architected a UK-wide sustainable commuting app, delivering customer-facing features and defining team-wide agentic workflows via Cursor & Claude Code.",
     tags: ["React Native", "TypeScript", "Agentic AI"],
     year: "2026",
     accent: "#2563EB",
