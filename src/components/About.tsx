@@ -101,8 +101,8 @@ export default function About() {
               className="text-base leading-relaxed mb-4"
               style={{ color: "var(--color-text-muted)" }}
             >
-              I&apos;m a Senior Product Engineer based in Manchester with two
-              decades of experience spanning startups, enterprise, and
+              I&apos;m a life long designer & developer based in Manchester with two
+              decades of professional experience spanning startups, enterprise, and
               high-growth SaaS. With a background in Graphic Design, I occupy
               the space where high-fidelity UX meets deep technical architecture
               — ensuring the user experience is as robust as the code behind it.
