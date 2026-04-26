@@ -115,7 +115,7 @@ export default function About() {
               application architectures. Currently, I&apos;m focused on
               orchestrating agentic AI patterns to supercharge both development
               velocity and customer-facing functionality. I thrive at the
-              intersection of design systems, mentoring, and shipping 0-to-1
+              intersection of UX design, coding and shipping 0-to-1
               products.
             </p>
 
