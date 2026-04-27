@@ -11,7 +11,7 @@ const projects: Project[] = [
     title: "Mobilityways App",
     category: "Cross-platform · React Native",
     description:
-      "Architected a UK-wide sustainable commuting app, delivering customer-facing AI features and defining team-wide agentic workflows via Cursor & Claude Code.",
+      "Architected a UK-wide sustainable commuting app, delivering customer-facing features and defining team-wide agentic workflows via Cursor & Claude Code.",
     longDescription:
       "As lead developer at Mobilityways, I took ownership of a cross-platform React Native app aimed at reducing carbon emissions from commuting across the UK. The role spanned architecture, feature delivery, stakeholder coordination, and the introduction of agentic AI tooling to accelerate the whole team's output.",
     highlights: [
@@ -20,7 +20,7 @@ const projects: Project[] = [
       "Coordinated with stakeholders and a distributed development team to plan and deliver new features to market.",
       "Defined coding standards and architecture patterns adopted across the engineering team.",
     ],
-    tags: ["React Native", "TypeScript", "Agentic AI", "Cursor", "Claude Code"],
+    tags: ["React Native", "TypeScript", "Agentic AI"],
     year: "2022 – Present",
     accent: "#2563EB",
   },
@@ -75,7 +75,15 @@ const projects: Project[] = [
       "Built a Design System using Storybook, following atomic design principles, working across both UX and dev teams.",
       "Mentored junior and placement developers through code reviews and discussion of SOLID and KISS principles.",
     ],
-    tags: ["React", "TypeScript", "GraphQL", "Apollo", "Cypress", "Storybook", "Lerna"],
+    tags: [
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Apollo",
+      "Cypress",
+      "Storybook",
+      "Lerna",
+    ],
     year: "2019 – 2022",
     accent: "#D97706",
   },
@@ -131,7 +139,9 @@ function ProjectCard({
     <article
       className="group relative rounded-2xl p-7 cursor-pointer transition-all duration-300"
       style={{
-        background: hovered ? "var(--color-surface-hover)" : "var(--color-surface)",
+        background: hovered
+          ? "var(--color-surface-hover)"
+          : "var(--color-surface)",
         border: "1px solid var(--color-border)",
         transform: hovered ? "translateY(-3px)" : "translateY(0)",
         boxShadow: hovered
@@ -141,7 +151,12 @@ function ProjectCard({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => onOpen(project)}
-      onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpen(project); } }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen(project);
+        }
+      }}
       role="button"
       tabIndex={0}
       aria-label={`View details for ${project.title}`}
@@ -156,26 +171,40 @@ function ProjectCard({
           aria-hidden="true"
         />
         <div className="flex items-center gap-3">
-          <span className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>
+          <span
+            className="text-xs font-medium"
+            style={{ color: "var(--color-text-muted)" }}
+          >
             {project.year}
           </span>
           <div
             className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300"
             style={{
-              background: hovered ? "var(--color-foreground)" : "var(--color-muted)",
-              transform: hovered ? "rotate(-45deg) scale(1.1)" : "rotate(0deg) scale(1)",
+              background: hovered
+                ? "var(--color-foreground)"
+                : "var(--color-muted)",
+              transform: hovered
+                ? "rotate(-45deg) scale(1.1)"
+                : "rotate(0deg) scale(1)",
             }}
             aria-hidden="true"
           >
             <ArrowUpRight
               size={14}
-              style={{ color: hovered ? "var(--color-background)" : "var(--color-text-muted)" }}
+              style={{
+                color: hovered
+                  ? "var(--color-background)"
+                  : "var(--color-text-muted)",
+              }}
             />
           </div>
         </div>
       </div>
 
-      <p className="text-xs font-medium uppercase tracking-wider mb-2" style={{ color: project.accent }}>
+      <p
+        className="text-xs font-medium uppercase tracking-wider mb-2"
+        style={{ color: project.accent }}
+      >
         {project.category}
       </p>
 
@@ -186,16 +215,22 @@ function ProjectCard({
         {project.title}
       </h3>
 
-      <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--color-text-muted)" }}>
+      <p
+        className="text-sm leading-relaxed mb-5"
+        style={{ color: "var(--color-text-muted)" }}
+      >
         {project.description}
       </p>
 
       <div className="flex flex-wrap gap-2">
-        {project.tags.slice(0, 3).map(tag => (
+        {project.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
             className="text-xs px-3 py-1 rounded-full font-medium"
-            style={{ background: "var(--color-muted)", color: "var(--color-secondary)" }}
+            style={{
+              background: "var(--color-muted)",
+              color: "var(--color-secondary)",
+            }}
           >
             {tag}
           </span>
@@ -203,7 +238,10 @@ function ProjectCard({
         {project.tags.length > 3 && (
           <span
             className="text-xs px-3 py-1 rounded-full font-medium"
-            style={{ background: "var(--color-muted)", color: "var(--color-text-muted)" }}
+            style={{
+              background: "var(--color-muted)",
+              color: "var(--color-text-muted)",
+            }}
           >
             +{project.tags.length - 3}
           </span>
@@ -245,7 +283,10 @@ export default function Projects() {
             </span>
             <h2
               className="font-heading font-bold leading-tight"
-              style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", color: "var(--color-foreground)" }}
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+                color: "var(--color-foreground)",
+              }}
             >
               Things I&apos;ve built
             </h2>
@@ -256,7 +297,11 @@ export default function Projects() {
             className="animate-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
           >
             {projects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} onOpen={setSelected} />
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onOpen={setSelected}
+              />
             ))}
           </div>
         </div>
