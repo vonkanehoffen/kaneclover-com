@@ -66,25 +66,18 @@ export default function ProjectPanel({
         aria-label={project.title}
         className="fixed inset-y-0 right-0 z-50 w-full max-w-lg overflow-y-auto"
         style={{
-          background: "var(--color-surface)",
-          borderLeft: "1px solid var(--color-border)",
+          background: project.accent,
           transform: visible ? "translateX(0)" : "translateX(100%)",
           transition: "transform 0.32s cubic-bezier(0.32, 0, 0.15, 1)",
-          boxShadow: "-24px 0 60px -12px rgba(0,0,0,0.1)",
+          boxShadow: `-24px 0 60px -12px ${project.accent}88`,
         }}
       >
         {/* Sticky header */}
         <div
           className="sticky top-0 z-10 flex items-center justify-between px-8 py-5"
-          style={{
-            background: "var(--color-surface)",
-            borderBottom: "1px solid var(--color-border)",
-          }}
+          style={{ background: project.accent, borderBottom: "1px solid rgba(255,255,255,0.15)" }}
         >
-          <p
-            className="text-xs font-semibold uppercase tracking-widest"
-            style={{ color: project.accent }}
-          >
+          <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.7)" }}>
             {project.category}
           </p>
           <button
@@ -92,15 +85,9 @@ export default function ProjectPanel({
             onClick={handleClose}
             aria-label="Close panel"
             className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
-            style={{ background: "var(--color-muted)", color: "var(--color-foreground)" }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = "var(--color-foreground)";
-              e.currentTarget.style.color = "var(--color-background)";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = "var(--color-muted)";
-              e.currentTarget.style.color = "var(--color-foreground)";
-            }}
+            style={{ background: "rgba(255,255,255,0.2)", color: "#ffffff" }}
+            onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.35)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.2)"; }}
           >
             <X size={14} aria-hidden="true" />
           </button>
@@ -111,29 +98,29 @@ export default function ProjectPanel({
           <div className="flex items-center gap-3 mb-7">
             <div
               className="w-12 h-12 rounded-xl"
-              style={{ background: project.accent + "20" }}
+              style={{ background: "rgba(255,255,255,0.2)" }}
               aria-hidden="true"
             />
-            <span className="text-sm font-medium" style={{ color: "var(--color-text-muted)" }}>
+            <span className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.7)" }}>
               {project.year}
             </span>
           </div>
 
           <h2
             className="font-heading font-bold leading-tight mb-5"
-            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)", color: "var(--color-foreground)" }}
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)", color: "#ffffff" }}
           >
             {project.title}
           </h2>
 
-          <p className="text-base leading-relaxed mb-10" style={{ color: "var(--color-text-muted)" }}>
+          <p className="text-base leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.85)" }}>
             {project.longDescription}
           </p>
 
           <div className="mb-10">
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-5"
-              style={{ color: "var(--color-text-muted)" }}
+              style={{ color: "rgba(255,255,255,0.6)" }}
             >
               Key highlights
             </p>
@@ -142,10 +129,10 @@ export default function ProjectPanel({
                 <li key={i} className="flex items-start gap-3 text-sm leading-relaxed">
                   <span
                     className="mt-[7px] w-1.5 h-1.5 rounded-full flex-shrink-0"
-                    style={{ background: project.accent }}
+                    style={{ background: "rgba(255,255,255,0.6)" }}
                     aria-hidden="true"
                   />
-                  <span style={{ color: "var(--color-foreground)" }}>{h}</span>
+                  <span style={{ color: "#ffffff" }}>{h}</span>
                 </li>
               ))}
             </ul>
@@ -154,7 +141,7 @@ export default function ProjectPanel({
           <div className="mb-10">
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-4"
-              style={{ color: "var(--color-text-muted)" }}
+              style={{ color: "rgba(255,255,255,0.6)" }}
             >
               Stack
             </p>
@@ -163,7 +150,7 @@ export default function ProjectPanel({
                 <span
                   key={tag}
                   className="text-xs px-3 py-1.5 rounded-lg font-medium"
-                  style={{ background: "var(--color-muted)", color: "var(--color-secondary)" }}
+                  style={{ background: "rgba(255,255,255,0.2)", color: "#ffffff" }}
                 >
                   {tag}
                 </span>
@@ -177,9 +164,9 @@ export default function ProjectPanel({
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer"
-              style={{ background: "var(--color-foreground)", color: "var(--color-background)" }}
-              onMouseEnter={e => { e.currentTarget.style.opacity = "0.82"; }}
-              onMouseLeave={e => { e.currentTarget.style.opacity = "1"; }}
+              style={{ background: "rgba(255,255,255,0.2)", color: "#ffffff", border: "1px solid rgba(255,255,255,0.3)" }}
+              onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.3)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.2)"; }}
             >
               View project
               <ExternalLink size={13} aria-hidden="true" />

@@ -13,14 +13,14 @@ const projects: Project[] = [
     description:
       "Architected a UK-wide sustainable commuting app, delivering customer-facing features and defining team-wide agentic workflows via Cursor & Claude Code.",
     longDescription:
-      "As lead developer at Mobilityways, I took ownership of a cross-platform React Native app aimed at reducing carbon emissions from commuting across the UK. The role spanned architecture, feature delivery, stakeholder coordination, and the introduction of agentic AI tooling to accelerate the whole team's output.",
+      "As a senior developer at Mobilityways, I took ownership of a cross-platform React Native app aimed at reducing carbon emissions from commuting across the UK. The role spanned architecture, feature delivery, stakeholder coordination, and the introduction of agentic AI tooling to accelerate the whole team's output.",
     highlights: [
       "Led end-to-end development of a new cross-platform commuting app from architecture to production.",
       "Introduced agentic AI workflows using Cursor and Claude Code for coding assistance, data analysis, and customer-facing AI features.",
       "Coordinated with stakeholders and a distributed development team to plan and deliver new features to market.",
       "Defined coding standards and architecture patterns adopted across the engineering team.",
     ],
-    tags: ["React Native", "TypeScript", "Agentic AI"],
+    tags: ["React Native", "TypeScript", "Cursor"],
     year: "2022 – Present",
     accent: "#2563EB",
   },
@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "Designed and built an iOS event-arrivals and e-ticketing app from Figma prototype to App Store. OAuth2-secured REST API integration via React Query.",
     longDescription:
-      "A freelance engagement to design and build an iOS app for GetRegistered, a platform managing event arrivals and e-ticketing. I worked with their in-house product team via workshops to define the architecture and UX, then took the product from Figma prototype all the way through to App Store submission.",
+      "A freelance engagement to design and build an iOS app for GetRegistered, a platform managing event arrivals and e-ticketing. I worked with their in-house product & development team via workshops to define the architecture and UX, then took the product from Figma prototype all the way through to App Store submission.",
     highlights: [
       "Ran product workshops with the in-house team to define application architecture and process flow.",
       "Designed a complete Figma prototype covering all app screens and interaction states.",
@@ -67,23 +67,15 @@ const projects: Project[] = [
     description:
       "Built React front ends for large telco customers including Vodafone and Daisy Group. Introduced TDD, E2E testing, and Micro Front End architecture to the business.",
     longDescription:
-      "At Digital Wholesale Solutions (acquired by Aurora), I worked on a suite of B2B sales and billing tools for the communications sector. I introduced a number of foundational technologies and practices that transformed the engineering culture, including a Lerna-based Micro Front End architecture and a full testing strategy.",
+      "At Digital Wholesale Solutions (later Aurora), I worked on a suite of B2B sales and billing tools for the communications sector. I introduced a number of foundational technologies and practices that transformed the engineering culture, including a Monorepo, Micro Front End architecture and a full E2E testing strategy.",
     highlights: [
-      "Developed React-based front ends for major enterprise clients including Vodafone and Daisy Group.",
-      "Designed a Lerna monorepo and Micro Front End architecture, introducing TypeScript, GraphQL, Apollo, and OpenAPI client generation.",
+      "Developed React-based front ends serving major enterprise clients including Vodafone and Daisy Group.",
+      "Designed a monorepo and Micro Front End architecture, introducing TypeScript, React and OpenAPI client generation.",
       "Introduced TDD practices and end-to-end testing via Cypress, significantly improving release confidence.",
       "Built a Design System using Storybook, following atomic design principles, working across both UX and dev teams.",
       "Mentored junior and placement developers through code reviews and discussion of SOLID and KISS principles.",
     ],
-    tags: [
-      "React",
-      "TypeScript",
-      "GraphQL",
-      "Apollo",
-      "Cypress",
-      "Storybook",
-      "Lerna",
-    ],
+    tags: ["React", "TypeScript", "Cypress", "Storybook"],
     year: "2019 – 2022",
     accent: "#D97706",
   },
@@ -94,7 +86,7 @@ const projects: Project[] = [
     description:
       "Took over the lead front-end role for a React & Redux Configure-Price-Quote system used by major UK connectivity resellers.",
     longDescription:
-      "At Assure24, I inherited and then led the front-end of a React and Redux-based CPQ (Configure, Price, Quote) tool that became a primary system for multiple large connectivity resellers across the UK. Over eight years I shaped the codebase, introduced modern tooling, and built a wide range of features and marketing properties.",
+      "At Assure24, I inherited and then led the front-end development of a React and Redux-based CPQ (Configure, Price, Quote) tool that became a primary system for multiple large connectivity resellers across the UK. Over eight years I shaped the codebase, introduced modern tooling, and built a wide range of features and marketing properties.",
     highlights: [
       "Took lead responsibility for a React/Redux CPQ system that grew to serve multiple major UK resellers.",
       "Implemented unit testing suites with Jest and Enzyme, establishing a culture of test coverage.",
@@ -113,7 +105,7 @@ const projects: Project[] = [
     description:
       "Designed and built an interactive information point system for an NHS hospital, with a custom locally-hosted CMS on a Linux distribution.",
     longDescription:
-      "As part of my work at Accelerate 4 / M-Logic, I led the design and development of a touch screen information kiosk system for an NHS hospital — one of the more unusual and rewarding projects of my early career. The system ran a custom CMS on a locally-hosted Linux distribution, driven by bespoke client hardware.",
+      "As part of my work at Accelerate 4 / M-Logic, I led the design and development of a touch screen information kiosk system for an NHS hospital — one of the more unusual and rewarding projects of my early career. The system ran a custom CMS on a locally-hosted Linux distribution, driven by client hardware we installed in their server room.",
     highlights: [
       "Designed and built a touch screen information point UI from scratch for a live NHS hospital environment.",
       "Developed a custom locally-hosted CMS to allow hospital staff to manage content without technical knowledge.",
